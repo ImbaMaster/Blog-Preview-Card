@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F4D04E;
+
+  --content-primary: #111111;
+  --content-secondary: #6B6B6B;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100svh;
+  background-color: var(--bg-secondary);
+
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  max-width: 384px;
+  min-width: 320px;
+  background-color: var(--bg-primary);
+  padding: 24px;
+  margin: 24px;
+
+  border: 1px solid var(--content-primary);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 var(--content-primary);
+}
+
+img {
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.blog-content span {
+  /* Prevent flexbox from stretching it */
+  align-self: flex-start;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 150%;
+  padding: 4px 12px;
+  color: var(--content-primary);
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.blog-content h1 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 150%;
+  transition: color 0.15s;
+  cursor: pointer;
+}
+
+.blog-content h1:hover {
+  color: var(--bg-secondary);
+}
+
+.blog-content h3 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.blog-content p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--content-secondary)
+}
+
+.blog-author {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.blog-author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.blog-author p {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 150%;
+  color: var(--content-primary);
+}
+
+@media (max-width: 767px) {
+
+  .blog-content span { 
+    font-size: 12px;
+  }
+
+  .blog-content h1 {
+    font-size: 20px;
+  }
+  
+  .blog-content h3 {
+    font-size: 12px;
+  }
+
+  .blog-content p {
+    font-size: 14px;
+  }
+}
